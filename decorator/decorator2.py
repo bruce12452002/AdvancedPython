@@ -1,3 +1,4 @@
+# 加上 @方法名稱，就有 decorator1.py 的功能了
 def my_decorator(f):
     def wrapper(*args, **kwargs):
         print("before")

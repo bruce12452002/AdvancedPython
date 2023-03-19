@@ -2,6 +2,7 @@ from functools import wraps
 
 
 def outer(s: str):
+    # 在 decorator3.py 的基礎上，用 my_decorator 方法包起來並回傳
     def my_decorator(f):
         @wraps(f)
         def wrapper(*args, **kwargs):
@@ -10,11 +11,10 @@ def outer(s: str):
             print(f"after s={s}")
 
         return wrapper
-
     return my_decorator
 
 
-@outer("a")
+@outer("a")  # 傳參
 def m1():
     print("m1")
 

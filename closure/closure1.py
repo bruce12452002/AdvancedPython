@@ -1,3 +1,4 @@
+# closure (閉包)：內部函數呼叫外部函數的屬性
 def my_closure():
     a = 1
 

@@ -2,6 +2,7 @@ from functools import wraps
 
 
 def my_decorator(f):
+    # 印出 m1 方法名時，本來會有 wrapper 的資訊，用了這個裝飾器就只會印出 m1 本身，也就是看起來和沒使用裝飾器一樣
     @wraps(f)
     def wrapper(*args, **kwargs):
         print("before")
